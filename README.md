@@ -1,2 +1,2 @@
 # CSAT-dic-java
-CSAT, College Scholastic Ability Test, word test
+CSAT, 대학수학능력시험 단어 외우기 프로그램
