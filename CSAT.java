@@ -1,5 +1,4 @@
-import java.io.BufferedReader;
-import java.io.IOException;
+import java.io.*;
 
 class CSAT{
     public static void main(String[] args) throws IOException {
@@ -10,16 +9,19 @@ class CSAT{
 
         BufferedReader readOption = new BufferedReader(new InputStreamReader(System.in));
 
-        //TODO Scanner 사용법 익히기
-        char inputOption = readOption.readLine().toCharArray();
+        //TODO char일 때 작동 확인
+        char inputOption = char(readOption.readLine());
 
         //TDOO Switch Case 형식으로 바꾸기
         //TODO 액션 지정 필요
-        if(inputOption = Q){
-
-        }
-        else if(inputOption = A){
-
+        switch(inputOption){
+        	case A :
+        	System.out.println("A");
+        	break;
+        	
+        	case Q :
+        	System.out.println("Q");
+        	break;
         }
     }
 }
