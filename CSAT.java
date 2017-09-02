@@ -36,12 +36,18 @@ class CSAT{
 
         BufferedReader readOption = new BufferedReader(new InputStreamReader(System.in));
 
+<<<<<<< HEAD
         //TODO readOption을 어떻게 char로 안전하게 변환할 수 있을까?
         char inputOption = readOption.readLine().charAt(0);
+=======
+        //TODO char일 때 작동 확인
+        char inputOption = char(readOption.readLine());
+>>>>>>> bce212e6c7d381aa342a722125191eefbfaca74b
 
         //TDOO Switch Case 형식으로 바꾸기
         //TODO 액션 지정 필요
         switch(inputOption){
+<<<<<<< HEAD
             case 'A':
                 returnOption = 0;
             
@@ -75,5 +81,15 @@ class Data{
 class MemoryTask{
     public static void onMemory(){
 
+=======
+        	case A :
+        	System.out.println("A");
+        	break;
+        	
+        	case Q :
+        	System.out.println("Q");
+        	break;
+        }
+>>>>>>> bce212e6c7d381aa342a722125191eefbfaca74b
     }
 }
