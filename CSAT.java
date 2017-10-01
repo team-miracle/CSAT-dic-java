@@ -3,11 +3,13 @@ import java.io.IOException;
 
 public class CSAT{
 
+    public static void main(String[] args) throws IOException {
+        showIntro(); // Intro 보여주기
+        int optionMain = onGetOption(); //옵션 받아오기
+    }
     /*시작화면 보여주는 메소드*/
-    private showIntro(int inputCycle){
-        int introCycle;
-
-        for(introCycle = 0; introCycle <= inputCycle; introCycle++){
+    private showIntro(){
+        for(int i = 0; i <= 2; i++){
         System.out.println("==================================");
         }
 
@@ -15,17 +17,9 @@ public class CSAT{
         System.out.println("Q: 단어 테스트\nA: 단어 외우기\nDebug: 디버그");
     }
     
-    public static void main(String[] args) throws IOException {
-            
-        int optionMain = onStart(); //옵션 받아오기
-
-    }
 
     /*인트로*/
-    private static int onStart() throws IOException {
-        
-        showIntro();
-        //TDOO Switch Case 형식으로 바꾸기
+    private static int onGetOption() throws IOException {
         //TODO 액션 지정 필요
         int inputOption = Task.readString();
         switch(inputOption){
@@ -36,7 +30,6 @@ public class CSAT{
             case 'Q':
                 returnOption = 1;
         }
-
         return returnOption;
     }
 }
@@ -67,13 +60,12 @@ class MemoryTask{
    }
 }
 
-public class Task{
-
+class Task{
 
     /*String 읽어오는 메소드*/
     public static String readString() throws IOException{
 
-        BufferedReader readOptionBuffer = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader stringReader = new BufferedReader(new InputStreamReader(System.in));
         String readOptionString = readOptionBuffer.readLine();
 
         //TODO Try & catch로 만들기
