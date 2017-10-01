@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class CSAT{
 
@@ -8,20 +9,24 @@ public class CSAT{
         int optionMain = onGetOption(); //옵션 받아오기
     }
     /*시작화면 보여주는 메소드*/
-    private showIntro(){
-        for(int i = 0; i <= 2; i++){
+    private static void showIntro(){
         System.out.println("==================================");
-        }
+        System.out.println("==================================");
+        System.out.println("==================================");
+        
 
         System.out.println("대학수학능력시험 영어 영역 단어");
         System.out.println("Q: 단어 테스트\nA: 단어 외우기\nDebug: 디버그");
+        
     }
     
 
     /*인트로*/
     private static int onGetOption() throws IOException {
+        //TODO 초기값 지정 안해도 되는지 확인해보기
+        int returnOption = 0;
         //TODO 액션 지정 필요
-        int inputOption = Task.readString();
+        int inputOption = Integer.parseInt(Task.readString());
         switch(inputOption){
 
             case 'A':
@@ -65,13 +70,13 @@ class Task{
     /*String 읽어오는 메소드*/
     public static String readString() throws IOException{
 
-        BufferedReader stringReader = new BufferedReader(new InputStreamReader(System.in));
-        String readOptionString = readOptionBuffer.readLine();
+        BufferedReader strReader = new BufferedReader(new InputStreamReader(System.in));
+        String readOptionString = strReader.readLine();
 
         //TODO Try & catch로 만들기
-        if(readOptionString = null){
+
             readOptionString = "7"; //실패 했을 때 에러 코드
-        }
+        
         return readOptionString;
     }
 }
